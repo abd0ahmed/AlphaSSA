@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 13.5" name="SSADB">
+  <DataContextMoniker Name="/SSADBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0d851413-df1c-4de7-abc6-d7998fd5b38d" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SSADBDataContext/tblStore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="560e9f48-3a66-4b4c-8eaa-240f5e61a97a" absoluteBounds="0.76500000000000012, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8747b1af-4d1d-4a4e-a1cd-7923ba806d7a" absoluteBounds="0.75, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SSADBDataContext/TblCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58e1fde8-36fe-413d-a753-828c00b34459" absoluteBounds="0.76499999999999968, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31bee89d-1053-44ea-bc2e-d83da72a8765" absoluteBounds="3.75, 0.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SSADBDataContext/TblClient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28831c08-627f-4469-8440-fa0d2eb00b1d" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e089086-52a9-482a-a149-e596021af4a7" absoluteBounds="3.75, 3.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SSADBDataContext/TbLInvoiceDetaile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8854022d-7329-4e7b-8bc2-38844483d96f" absoluteBounds="3.7649999999999997, 4.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bef6f17a-d580-4821-915a-02456fcb05f1" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SSADBDataContext/TblStoreProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15c41ebe-e475-49f5-a9ae-bc8837085e02" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ed65810-2920-4f8a-b567-740808bf1ee0" absoluteBounds="0.75, 6.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SSADBDataContext/TblCompanyInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1664ab9f-9f07-460b-bc0d-656bdaf2dcaa" absoluteBounds="0.76500000000000057, 7.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82bf0e0a-689a-4115-bbb4-78d3b25845ab" absoluteBounds="6.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SSADBDataContext/tblCompanyName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0aa29569-b3b8-4f93-8d71-e3a065436d8e" absoluteBounds="6.7650000000000006, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a83c4265-e3dc-49b1-8083-9a6c951d73cd" absoluteBounds="3.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/SSADBDataContext/TblSaller" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86f0862a-c4b2-4993-8c87-ca25c9f0f115" absoluteBounds="3.7650000000000006, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59778366-4ba0-4032-9f21-0b4b8b0b7223" absoluteBounds="6.75, 6.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SSADBDataContext/TblProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="889dc301-fc11-4ed7-a805-803dda30f133" absoluteBounds="6.7650000000000006, 7.2100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="030d828c-5cf8-467b-a205-a5a53690ab93" absoluteBounds="9.75, 0.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SSADBDataContext/TblShift" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc126bd3-d92e-4dce-9e43-d4938e1a6b32" absoluteBounds="9.765, 1.2100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="998ecc88-4d0f-4587-bc2f-b6ce44f25631" absoluteBounds="0.75, 9.75, 2, 3.5016097005208309">
+      <DataClassMoniker Name="/SSADBDataContext/TblInvoiceHeader" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8efd30a4-ae47-4273-b230-6602c510fa72" absoluteBounds="0.76500000000000057, 10.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bcf460ca-9ed2-4d44-abfa-e26cde9abb6b" absoluteBounds="3.75, 9.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SSADBDataContext/TblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54a8b928-7b42-4704-9d68-3fae9ed2bf80" absoluteBounds="3.765, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

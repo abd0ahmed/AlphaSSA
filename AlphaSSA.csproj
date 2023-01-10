@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BF65D88-8D11-418A-9C1D-2299CC19D204}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AlphaSSA</RootNamespace>
+    <AssemblyName>AlphaSSA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Alpha-Logo-Black.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLoader, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.4">
+      <HintPath>D:\Abdo\Devoloping\Dlls\Bunifu_UI_v1.5.4.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1.Wizard, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authentication.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authentication.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authentication.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Authorization.Policy, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Authorization.Policy.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.Core.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Mvc.DataAnnotations, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Mvc.DataAnnotations.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.ResponseCaching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.ResponseCaching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.DotNet.PlatformAbstractions.2.1.0\lib\net45\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.2.1.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Localization, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Localization.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Localization.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Localization.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Localization.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.2.2.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SkinProject1">
+      <HintPath>..\..\..\..\Documents\My DXSkins\SkinProject1\SkinProject1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Internal\Master.cs" />
+    <Compile Include="Models\ClsBarCodeModel.cs" />
+    <Compile Include="Models\clsCatDetails.cs" />
+    <Compile Include="Models\ClsClientInfo.cs" />
+    <Compile Include="Models\clsDilyreportModel.cs" />
+    <Compile Include="Models\clsFullProduct.cs" />
+    <Compile Include="Models\clsInvoiceInfos.cs" />
+    <Compile Include="Models\ClsInvoiceProducts.cs" />
+    <Compile Include="Models\ClsInvoiceReturnModel.cs" />
+    <Compile Include="Models\ClsInvReport.cs" />
+    <Compile Include="Models\ClsInvReportModel.cs" />
+    <Compile Include="Models\clsProductDetails.cs" />
+    <Compile Include="Models\CLsProductSalesInvoicesInfo.cs" />
+    <Compile Include="Models\clsProductsReportModel.cs" />
+    <Compile Include="Models\ClsStoreDetailsVM.cs" />
+    <Compile Include="Models\ClsStoreInfo.cs" />
+    <Compile Include="Models\ClsStoreProductsModel.cs" />
+    <Compile Include="Models\InvoiceReportModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSADB.cs">
+      <DependentUpon>SSADB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SSADB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSADB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmAddProduct.Designer.cs">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmBarcode.Designer.cs">
+      <DependentUpon>FrmBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmCat.Designer.cs">
+      <DependentUpon>frmCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmCatDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmCatDetails.Designer.cs">
+      <DependentUpon>FrmCatDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmClientInfo.Designer.cs">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmClients.Designer.cs">
+      <DependentUpon>FrmClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmClientsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmClientsList.Designer.cs">
+      <DependentUpon>FrmClientsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmDailyReprort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmDailyReprort.Designer.cs">
+      <DependentUpon>frmDailyReprort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmDiscount2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmDiscount2.Designer.cs">
+      <DependentUpon>frmDiscount2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmInvNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmInvNew.Designer.cs">
+      <DependentUpon>frmInvNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmInvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmInvoiceList.Designer.cs">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmInvReprot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmInvReprot.Designer.cs">
+      <DependentUpon>FrmInvReprot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmMAster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmMAster.Designer.cs">
+      <DependentUpon>FrmMAster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsReport.Designer.cs">
+      <DependentUpon>FrmProductsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmSaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmSaller.Designer.cs">
+      <DependentUpon>FrmSaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmSellerPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmSellerPrompt.Designer.cs">
+      <DependentUpon>FrmSellerPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmProductDetails.Designer.cs">
+      <DependentUpon>FrmProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsList.Designer.cs">
+      <DependentUpon>FrmProductsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsSales .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmProductsSales .Designer.cs">
+      <DependentUpon>FrmProductsSales .cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmReturn.Designer.cs">
+      <DependentUpon>FrmReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmStoreDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmStoreDetails.Designer.cs">
+      <DependentUpon>frmStoreDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmStoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmStoreInfo.Designer.cs">
+      <DependentUpon>FrmStoreInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmStores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmStores.Designer.cs">
+      <DependentUpon>FrmStores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmTopSalesRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmTopSalesRep.Designer.cs">
+      <DependentUpon>FrmTopSalesRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\FrmUsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\FrmUsersList.Designer.cs">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\MonthlyReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VIEW\MonthlyReport.Designer.cs">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\rptbarcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VIEW\rptbarcode.Designer.cs">
+      <DependentUpon>rptbarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\RptInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VIEW\RptInvoice.Designer.cs">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UCDiscount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UCDiscount.Designer.cs">
+      <DependentUpon>UCDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UCInvoicePanSec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UCInvoicePanSec.Designer.cs">
+      <DependentUpon>UCInvoicePanSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UCInvSaller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UCInvSaller.Designer.cs">
+      <DependentUpon>UCInvSaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UCinvStore.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UCinvStore.Designer.cs">
+      <DependentUpon>UCinvStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\UCShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIEW\UCShift.Designer.cs">
+      <DependentUpon>UCShift.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VIEW\frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmBarcode.resx">
+      <DependentUpon>FrmBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmCat.resx">
+      <DependentUpon>frmCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmCatDetails.resx">
+      <DependentUpon>FrmCatDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmClientInfo.resx">
+      <DependentUpon>frmClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmClients.resx">
+      <DependentUpon>FrmClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmClientsList.resx">
+      <DependentUpon>FrmClientsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmDailyReprort.resx">
+      <DependentUpon>frmDailyReprort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmDiscount2.resx">
+      <DependentUpon>frmDiscount2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmInvNew.resx">
+      <DependentUpon>frmInvNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmInvoiceList.resx">
+      <DependentUpon>frmInvoiceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmInvReprot.resx">
+      <DependentUpon>FrmInvReprot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmMAster.resx">
+      <DependentUpon>FrmMAster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmProductsReport.resx">
+      <DependentUpon>FrmProductsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmSaller.resx">
+      <DependentUpon>FrmSaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmSellerPrompt.resx">
+      <DependentUpon>FrmSellerPrompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmProductDetails.resx">
+      <DependentUpon>FrmProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmProductsList.resx">
+      <DependentUpon>FrmProductsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmProductsSales .resx">
+      <DependentUpon>FrmProductsSales .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmReturn.resx">
+      <DependentUpon>FrmReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmSettings.resx">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmStoreDetails.resx">
+      <DependentUpon>frmStoreDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmStoreInfo.resx">
+      <DependentUpon>FrmStoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmStores.resx">
+      <DependentUpon>FrmStores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmTopSalesRep.resx">
+      <DependentUpon>FrmTopSalesRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\FrmUsersList.resx">
+      <DependentUpon>FrmUsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\MonthlyReport.resx">
+      <DependentUpon>MonthlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\rptbarcode.resx">
+      <DependentUpon>rptbarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\RptInvoice.resx">
+      <DependentUpon>RptInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UCDiscount.resx">
+      <DependentUpon>UCDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UCInvoicePanSec.resx">
+      <DependentUpon>UCInvoicePanSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UCInvSaller.resx">
+      <DependentUpon>UCInvSaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UCinvStore.resx">
+      <DependentUpon>UCinvStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\UCShift.resx">
+      <DependentUpon>UCShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SSADB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SSADB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SSADB.dbml.layout">
+      <DependentUpon>SSADB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\078c22f50356d3fa941c24472c678350.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alpha-Logo-Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1201523312-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Alpha-Logo-Black.ico" />
+    <None Include="Resources\exporttoxls1.svg" />
+    <None Include="Resources\actions_edit.svg" />
+    <None Include="Resources\exporttoxls.svg" />
+    <None Include="Resources\actions_arrow1left.svg" />
+    <None Include="Resources\enablesearch.svg" />
+    <None Include="Resources\currency.svg" />
+    <None Include="Resources\shipmentawaiting.svg" />
+    <None Include="Resources\refund.svg" />
+    <None Include="Resources\exit.svg" />
+    <None Include="Resources\clintsList.svg" />
+    <None Include="Resources\bo_order_item.svg" />
+    <None Include="Resources\save1.svg" />
+    <None Include="Resources\addrecord.svg" />
+    <None Include="Resources\addparameter.svg" />
+    <None Include="Resources\print.svg" />
+    <None Include="Resources\save.svg" />
+    <None Include="Resources\invoiceHEader.svg" />
+    <None Include="Resources\control.svg" />
+    <None Include="Resources\icons8-search-30.png" />
+    <None Include="Resources\icons8-search-67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -2 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="CashVoucher">
+      <polygon points="26,2 2,2 2,6 2,12 6,12 6,6 26,6 26,12 30,12 30,2  " fill="#FFFFFF" class="White" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -2)" style="enable-background:new 0 0 32 32">
+    <g id="CashVoucher">
+      <path d="M8, 28L8, 30L12, 30L12, 28L14, 28L14, 30L18, 30L18, 28L20, 28L20, 30L24, 30L24, 28L24, 8L8, 8L8, 28zM12, 12L20, 12L20, 14L12, 14L12, 12zM12, 16L20, 16L20, 18L12, 18L12, 16zM12, 20L20, 20L20, 22L12, 22L12, 20z" fill="#FFFFFF" class="White" />
+    </g>
+  </g>
+</svg>
