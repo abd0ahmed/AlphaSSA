@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using Bunifu.UI.WinForms;
 
 namespace AlphaSSA.VIEW
 {
@@ -19,12 +20,12 @@ namespace AlphaSSA.VIEW
             InitializeComponent();
         }
 
-       
+
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             try
             {
-                
+
                 Application.Exit();
             }
             catch (Exception)
@@ -32,7 +33,7 @@ namespace AlphaSSA.VIEW
 
                 throw;
             }
-           
+
         }
         void Login()
         {
@@ -49,12 +50,21 @@ namespace AlphaSSA.VIEW
                     XtraMessageBox.Show("كلمة المرور غير صحيحة");
                     return;
                 }
-                if (user.UserType==(byte)Internal.Master.UserType.Admin)
+                if (user.UserType == (byte)Internal.Master.UserType.Admin)
                 {
 
                     FrmMain frm = new FrmMain();
                     Hide();
-                    frm.ShowDialog();
+                    try
+                    {
+                        frm.ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.ToString());
+                    }
+                  
 
                 }
                 else if (user.UserType == (byte)Internal.Master.UserType.Casher)
@@ -63,15 +73,15 @@ namespace AlphaSSA.VIEW
                     Hide();
                     frm.ShowDialog();
                 }
-              
-              
+
+
                 Show();
             }
             txtPassword.Text = "";
 
         }
 
-    
+
         private void BTnLogin_Click(object sender, EventArgs e)
         {
             Login();
@@ -82,29 +92,40 @@ namespace AlphaSSA.VIEW
             Login();
         }
 
-        private void guna2TextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData==Keys.Enter||e.KeyData==Keys.Return)
-            {
-                var se = (Guna2TextBox)sender;
-                if (  se.Name== "txtUsername")
-                {
-                    txtPassword.Focus();
-                }
-                else if (se.Name=="txtPassword")
-                {
-                    BTnLogin_Click(BTnLogin, new EventArgs() );
-                }
-            }
-        }
+
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            txtUsername.Focus();
+            Pic.Focus();
         }
 
         private void BtnAbout_Click(object sender, EventArgs e)
         {
+            FrmAbout frm = new FrmAbout();
+            frm.ShowDialog();
+                 
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter || e.KeyData == Keys.Return)
+            {
+
+                txtPassword.Focus();
+
+
+            }
+        }
+
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter || e.KeyData == Keys.Return)
+            {
+                BTnLogin_Click(BTnLogin, new EventArgs());
+
+
+            }
 
         }
     }

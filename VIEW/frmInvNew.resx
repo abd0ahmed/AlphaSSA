@@ -118,59 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAalJREFUSEvt
-        lskuREEUhm9MiSlsRDwBQbyBSNhZiBjCE4h5fAdCPAUxPIjETrQ5pjU7C+MG31/pk/SitapqjUX/yZfO
-        qXvP+fueureqkqL+s8phGLbgHB7TXMAOjEAF/Kj64Qo+vuEGBiFvlcAKWOFjmIM2qIFqaIVZOAS7bx1K
-        IVrLoEJvMAn6I19J18bgBcw8Sn3wDjLt1oCnOsHMg9uuF+kSlDylgUDpyZV7C0Ev3AAo8RRi5kpttzkf
-        1YCvNkFJCy6K0zSoxq6LPKUnVVKHi+LUDKpx7SJPPYCS6lwUp0pQjWcXecqM610UpypQjScXeUrLoJLy
-        aXULqEZQqzdASUsuipNWM9XYdpGnhkBJ+XxOKVCNoM9JZlrwlTijgUCNg3JVI3jH6gVbMns04KkueAUZ
-        ayEKVgPcgQrIXE+eq+1q7wSY6RoES6Y2R/fpX3ECi9AOtaCtUVvkPByB3bcKuXayrMo01cvVCGq7zXku
-        dFjQoSFY2UxNZaCjj9ZxGdjRR8cgHYd0Lerok2mqBaQJCq4/MZX2QaZnkNnegmsPDuBXTYsqoJLkE460
-        giSW0c6yAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="guna2ImageButton1.PressedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAalJREFUSEvt
-        lskuREEUhm9MiSlsRDwBQbyBSNhZiBjCE4h5fAdCPAUxPIjETrQ5pjU7C+MG31/pk/SitapqjUX/yZfO
-        qXvP+fueureqkqL+s8phGLbgHB7TXMAOjEAF/Kj64Qo+vuEGBiFvlcAKWOFjmIM2qIFqaIVZOAS7bx1K
-        IVrLoEJvMAn6I19J18bgBcw8Sn3wDjLt1oCnOsHMg9uuF+kSlDylgUDpyZV7C0Ev3AAo8RRi5kpttzkf
-        1YCvNkFJCy6K0zSoxq6LPKUnVVKHi+LUDKpx7SJPPYCS6lwUp0pQjWcXecqM610UpypQjScXeUrLoJLy
-        aXULqEZQqzdASUsuipNWM9XYdpGnhkBJ+XxOKVCNoM9JZlrwlTijgUCNg3JVI3jH6gVbMns04KkueAUZ
-        ayEKVgPcgQrIXE+eq+1q7wSY6RoES6Y2R/fpX3ECi9AOtaCtUVvkPByB3bcKuXayrMo01cvVCGq7zXku
-        dFjQoSFY2UxNZaCjj9ZxGdjRR8cgHYd0Lerok2mqBaQJCq4/MZX2QaZnkNnegmsPDuBXTYsqoJLkE460
-        giSW0c6yAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAcCAYAAACXkxr4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABySURBVGhD7dqpEYBAAARBQiOLKwp9kAaZ8xRJtBjRYvXY
+        XfZxrvs2rwDeFss/jjuCeRWEUhBMQTAFwRQEUxBMQTAFwRQEUxBMQTAFwRQEUxBMQTAFwRQEUxBMQTAF
+        wRQEUxBMQTAFwRQE8wXpSuoY5/oAjKxzu1BnSUEAAAAASUVORK5CYII=
 </value>
   </data>
   <assembly alias="DevExpress.Data.v22.1" name="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="layoutControlItem2.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjEsIFZlcnNpb249MjIuMS4z
-        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
-        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAFQEAAAC77u/
-        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
-        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
-        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3Bh
-        Y2U9InByZXNlcnZlIiBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAg
-        MzIgMzIiPg0KICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLkdyZWVue2ZpbGw6IzAzOUMyMzt9Cgku
-        QmxhY2t7ZmlsbDojNzI3MjcyO30KCS5SZWR7ZmlsbDojRDExQzFDO30KCS5ZZWxsb3d7ZmlsbDojRkZC
-        MTE1O30KCS5CbHVle2ZpbGw6IzExNzdENzt9CgkuV2hpdGV7ZmlsbDojRkZGRkZGO30KCS5zdDB7b3Bh
-        Y2l0eTowLjU7fQoJLnN0MXtvcGFjaXR5OjAuNzU7fQo8L3N0eWxlPg0KICA8ZyBpZD0iRW5hYmxlU2Vh
-        cmNoIj4NCiAgICA8cGF0aCBkPSJNMTQuNSwxNy44QzEwLjgsMTcuMSw4LDEzLjksOCwxMGMwLTQuNCwz
-        LjYtOCw4LThzOCwzLjYsOCw4YzAsMS41LTAuNCwyLjgtMS4xLDRjMCwwLDAuMSwwLDAuMSwwICAgYzAu
-        NywwLDEuNCwwLjEsMi4xLDAuMmMwLjYtMS4zLDAuOS0yLjcsMC45LTQuMmMwLTUuNS00LjUtMTAtMTAt
-        MTBDMTAuNSwwLDYsNC41LDYsMTBjMCwyLjEsMC43LDQuMSwxLjgsNS43bC03LjUsNy42ICAgYy0wLjQs
-        MC4zLTAuNCwwLjksMCwxLjNsMS4yLDEuMmMwLjMsMC4zLDAuOSwwLjMsMS4yLDBsNy42LTcuNmMwLjks
-        MC42LDEuOSwxLjEsMi45LDEuNEMxMy42LDE5LDE0LDE4LjQsMTQuNSwxNy44eiIgY2xhc3M9IkJsdWUi
-        IC8+DQogICAgPHBhdGggZD0iTTIzLDE2Yy00LjQsMC04LjEsMy05LDdjMC45LDQsNC42LDcsOSw3YzQu
-        NCwwLDguMS0zLDktN0MzMS4xLDE5LDI3LjQsMTYsMjMsMTZ6IE0yMywyOGMtMy4zLDAtNi4xLTItNy01
-        ICAgYzAuOS0zLDMuNy01LDctNXM2LjEsMiw3LDVDMjkuMSwyNiwyNi4zLDI4LDIzLDI4eiBNMjMsMjZj
-        LTEuNywwLTMtMS4zLTMtM3MxLjMtMywzLTNzMywxLjMsMywzUzI0LjcsMjYsMjMsMjZ6IiBjbGFzcz0i
-        QmxhY2siIC8+DQogIDwvZz4NCjwvc3ZnPgs=
-</value>
-  </data>
   <data name="tabNavigationPage2.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjEsIFZlcnNpb249MjIuMS4z

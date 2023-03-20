@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraLayout.Filtering.Templates;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace AlphaSSA.VIEW
        public TblClient Client { get; set; }
         public UCInvoicePanSec(SSADBDataContext db)
         {
+            DevExpress.Utils.Paint.TextRendererHelper.UseScriptAnalyse = false;
             InitializeComponent();
             Client = new TblClient();
             this.db = db;
@@ -91,17 +93,28 @@ namespace AlphaSSA.VIEW
 
         private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
-            if (textEdit1.EditValue!=null&& (int)textEdit1.EditValue > 0)
+            //  textEdit1.StartAutoSearch(textEdit1.Text, true);
+            if (textEdit1.EditValue != null && (int)textEdit1.EditValue > 0)
             {
-                Client = ((BindingList<TblClient>)textEdit1.Properties.DataSource).Single(x => x.ID == int.Parse(textEdit1.EditValue.ToString()));
+                Client = ((BindingList<TblClient>)textEdit1.Properties.DataSource).SingleOrDefault(x => x.ID == int.Parse(textEdit1.EditValue.ToString()));
                 textEdit2.Text = Client.Phone;
             }
-           
+
         }
 
         private void textEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             
+        }
+
+        private void textEdit1_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyData==Keys.Enter||e.KeyData==Keys.Return)
+            {
+                
+            }
+           
         }
     }
 }

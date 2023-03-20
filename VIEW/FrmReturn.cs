@@ -1,5 +1,6 @@
 ﻿using AlphaSSA.Internal;
 using AlphaSSA.Models;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Popup;
 using System;
@@ -37,6 +38,7 @@ namespace AlphaSSA.VIEW
             {
 
                 SetData();
+                Header.shift = db.TblShifts.Select(x=>x.ID).MaxOrDefault();
                 var sourceHeader = db.TblInvoiceHeaders.SingleOrDefault(x => x.ID == (int)lkpInvoiceCode.EditValue);
                 db.TblInvoiceHeaders.InsertOnSubmit(Header);
                 db.SubmitChanges();
@@ -104,7 +106,7 @@ namespace AlphaSSA.VIEW
             Header.Discount = 0;
             Header.net = Header.Total;
             Header.SourceID = sourceHeader.ID;
-           
+            Header.Time = DateTime.Today.TimeOfDay;
         }
         string GetNewCode(string codeform)
         {

@@ -130,6 +130,9 @@
   <data name="istockphoto-1201523312-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\istockphoto-1201523312-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-whatsapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-whatsapp.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="addrecord" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addrecord.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
@@ -178,13 +181,16 @@
   <data name="shipmentawaiting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shipmentawaiting.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="exporttoxls1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exporttoxls1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="refund" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refund.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="exporttoxls" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exporttoxls.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="exporttoxls1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exporttoxls1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="icons8-whatsapp (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-whatsapp (1).svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
 </root>

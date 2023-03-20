@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,11 +13,13 @@ namespace AlphaSSA.Models
        public List<ClsStoreProductsModel> StoreProducts;
         List<CLsProductInvoicesInfo> InvoiceHeaders;
       public List<TbLInvoiceDetaile> invoiceDetailes;
+       
         public clsFullProduct()
         {
 
-
+           
         }
+
         public clsFullProduct(int id)
         {
             this.ID = id;
@@ -97,7 +100,7 @@ namespace AlphaSSA.Models
                                   }
                            ).ToList();
             }
-              
+
         
         int GetSalesinvCount()
         {
@@ -108,6 +111,7 @@ namespace AlphaSSA.Models
             return salesInvoices.Count;
 
         }
+        
         int GetBurchaseinvCount()
         {
            
@@ -117,14 +121,17 @@ namespace AlphaSSA.Models
             return BurchaseInvoices.Count;
 
         }
+        
         List<CLsProductInvoicesInfo> GetSalesInvoices()
         {
             return InvoiceHeaders.Where(x => x.invoiceType == (int)AlphaSSA.Internal.Master.InvoiceType.Sales).ToList();
         }
+       
         List<CLsProductInvoicesInfo> GetBurchaseInvoices()
         {
             return InvoiceHeaders.Where(x => x.invoiceType == (int)AlphaSSA.Internal.Master.InvoiceType.Purchase).ToList();
         }
+       
         decimal GetProductValue()
         {
             decimal value = 0;
@@ -133,6 +140,7 @@ namespace AlphaSSA.Models
             value = decimal.Parse((Qty * price).ToString());
             return value;
         }
+        
         decimal GetProductBuyValue()
         {
             decimal value = 0;
@@ -141,14 +149,17 @@ namespace AlphaSSA.Models
             value = decimal.Parse((Qty * BuyPrise).ToString());
             return value;
         }
+        
         List<CLsProductInvoicesInfo> GetSalesretInvoices()
         {
             return InvoiceHeaders.Where(x => x.invoiceType == (byte)Internal.Master.InvoiceType.salesReturn).ToList();
         }
+        
         List<CLsProductInvoicesInfo> GetBurchaseretInvoices()
         {
             return InvoiceHeaders.Where(x => x.invoiceType == (byte)Internal.Master.InvoiceType.PurchaseReturn).ToList();
         }
+        
         int GetSalesCount()
         {
            
@@ -158,6 +169,7 @@ namespace AlphaSSA.Models
                      select   d));
             return (int)data.Sum(x=>x.itemQty);
         }
+        
         int GetPurchaseCount()
         {
             var data = ((from d in invoiceDetailes
@@ -168,6 +180,7 @@ namespace AlphaSSA.Models
         }
        
         int _ProductCount = 0;
+        
         int ProductCount()
         {
             if (_ProductCount != 0 && StoreProducts != null)
@@ -184,31 +197,42 @@ namespace AlphaSSA.Models
 
             return _ProductCount;
         }
-
+        [Display(Name = "اجمالي قيمة بيع")]
         public decimal ProductValue { get { return GetProductValue(); } }
+        [Display(Name = "اجمالي قيمة شراء")]
         public decimal ProductBuyValue { get { return GetProductBuyValue(); } }
-
+        [Display(Name = "اجمالي كميات المخازن")]
         public int Qty { get { return ProductCount(); } }
+       
         public List<CLsProductInvoicesInfo> salesInvoices { get { return GetSalesInvoices(); } }
+        [Display(Name = "فواتير الشراء")]
         public List<CLsProductInvoicesInfo> BurchaseInvoices { get { return GetBurchaseInvoices(); } }
+        [Display(Name = "فواتير مرتجع بيع")]
         public List<CLsProductInvoicesInfo> salesretInvoices { get { return GetSalesretInvoices(); } }
+        [Display(Name = "فواتير مرتجع شراء")]
         public List<CLsProductInvoicesInfo> BurchaseretInvoices { get { return GetBurchaseretInvoices(); } }
+        public new int ID { get; set; }
+        [Display(Name = "عدد فواتير البيع")]
         public int SalesinvCount
         {
             get { return GetSalesinvCount(); }
         }
+        [Display(Name = "عدد القطع المباعة")]
         public int SalesCount
         {
             get { return GetSalesCount(); }
         }
+        [Display(Name = "عدد القطع المشتراة")]
         public int PurchaseCount
         {
             get { return GetPurchaseCount(); }
         }
+        [Display(Name = "عدد فواتير الشراء")]
         public int PurchaseinvCount
         {
             get { return GetBurchaseinvCount(); }
         }
+        
     }
 }
 

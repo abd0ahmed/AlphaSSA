@@ -11,10 +11,12 @@ namespace AlphaSSA.Models
     public class clsCatDetails : TblCategory
     {
         SSADBDataContext db;
-        List<clsFullProduct> tblProducts;
-        [Display(Name = "المنتجات")]
+        
         [Browsable(true)]
-        [HiddenInput(DisplayValue = false)]
+        [Display(AutoGenerateField = false)]
+        [ScaffoldColumn(false)]
+        List<clsFullProduct> tblProducts;
+        [ScaffoldColumn(false)]
         public List<clsFullProduct> Products { get { return _Products(); } }
         [Display(Name = "عدد المنتجات")]
         public int ProductsCount { get { return GetProductsCount(); } }
@@ -39,7 +41,7 @@ namespace AlphaSSA.Models
         {
             if (tblProducts!=null)
             {
-                return Products.Count;
+                return tblProducts.Count;
             }
             else
             {
@@ -51,14 +53,18 @@ namespace AlphaSSA.Models
         {
             if (tblProducts != null)
             {
-                return Products.Select (x => x.BuyPrise *x.Qty).Sum();
+                return tblProducts.Select (x => x.BuyPrise *x.Qty).Sum();
             }
             else
             {
                 return 0;
             }
         }
-        List<Models.clsFullProduct> _Products()
+        [Display(Name = "المنتجات")]
+        [Browsable(true)]
+
+        
+        private List<Models.clsFullProduct> _Products()
         {
             if (tblProducts==null)
             {

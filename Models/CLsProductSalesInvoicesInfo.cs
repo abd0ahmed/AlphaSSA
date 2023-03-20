@@ -28,7 +28,10 @@ namespace AlphaSSA.Models
         int? _qty = null;
         [Display(Name = "كمية")]
         public int qty { get { return GetProductInvQty(); } }
-
+        [Display(Name = "م")]
+        public new int ID { get; set; }
+        [Display(Name = "كود")]
+        public new string code { get; set; }
         int GetProductInvQty()
         {
             if (itemid==0)

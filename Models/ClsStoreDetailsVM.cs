@@ -18,6 +18,8 @@ namespace AlphaSSA.Models
         public int Qty { get; set; }
         [Display(Name ="اسم الصنف")]
         public string Name { get; set; }
+        [Display(Name = "التصنيف")]
+        public string CatName { get; set; }
         public decimal TotalSell { get { return SellPrice * Qty ?? 0; } }
         public decimal TotalBuy { get { return BuyPrice * Qty ?? 0; } }
     }

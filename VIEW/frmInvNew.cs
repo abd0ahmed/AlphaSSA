@@ -350,9 +350,18 @@ namespace AlphaSSA.VIEW
 
         void InializeClients()
         {
-            Clients = new BindingList<TblClient>(db.TblClients.ToList());
-            UCUser.GetData(Clients);
-            UCUser.SetClientID(Properties.Settings.Default.DefaultClient);
+            try
+            {
+                Clients = new BindingList<TblClient>(db.TblClients.ToList());
+                UCUser.GetData(Clients);
+                UCUser.SetClientID(Properties.Settings.Default.DefaultClient);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+          
         }
 
         void inializeControls()
@@ -849,6 +858,7 @@ namespace AlphaSSA.VIEW
                             price = item.Price,
                             TotalPrice = item.totalPrice,
                             StoreID = UCinvStore.GetClientID()
+                            
                         };
                         ItemsForSave.Add(ifs);
                         //--------------SubFromStoreQty
