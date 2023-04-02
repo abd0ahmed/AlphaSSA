@@ -15,6 +15,7 @@ namespace AlphaSSA.VIEW
         TblProduct product;
         TblStoreProduct storeProduct;
         bool edit ;
+        //Internal.FrmProductsProcessor ProductsProcessor;
         public frmAddProduct()
         {
             InitializeComponent();
@@ -23,13 +24,14 @@ namespace AlphaSSA.VIEW
             New();
             show_save();
             show_New();
-            
+           // ProductsProcessor = new Internal.FrmProductsProcessor();
         }
         public frmAddProduct(TblProduct _product)
         {
             InitializeComponent();
             edit = true;
             product = _product;
+           // ProductsProcessor .Product= _product;
             txtQty.Properties.ReadOnly = true;
             GetData();
             show_save();
@@ -96,10 +98,12 @@ namespace AlphaSSA.VIEW
             txtID.Text = "";
             txtPrice.Text = "";
             txtBuyPrise.Text = "";
-            txtQty.Text = "";
-            txtBarcode.Text = "";
-            lkpStore.EditValue = Properties.Settings.Default.DefaultStore;
-           // lkpCat.EditValue = Properties.Settings.Default.DefaultCat;
+            txtQty.Text = "0";
+          if(lkpCat.EditValue==null)
+                 lkpCat.EditValue = Properties.Settings.Default.DefaultCat;
+                lkpStore.EditValue = Properties.Settings.Default.DefaultStore;
+            txtBarcode.Text = GetNewCode();
+            // lkpCat.EditValue = Properties.Settings.Default.DefaultCat;
         }
         void setData()
         {

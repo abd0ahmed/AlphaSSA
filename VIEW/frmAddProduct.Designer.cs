@@ -32,10 +32,8 @@ namespace AlphaSSA.VIEW
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProduct));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.barcodeC = new DevExpress.XtraEditors.BarCodeControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtBuyPrise = new DevExpress.XtraEditors.TextEdit();
+            this.barcodeC = new DevExpress.XtraEditors.BarCodeControl();
             this.txtQty = new DevExpress.XtraEditors.TextEdit();
             this.lkpStore = new DevExpress.XtraEditors.LookUpEdit();
             this.lkpCat = new DevExpress.XtraEditors.LookUpEdit();
@@ -43,6 +41,7 @@ namespace AlphaSSA.VIEW
             this.txtPrice = new DevExpress.XtraEditors.TextEdit();
             this.txtProductName = new DevExpress.XtraEditors.TextEdit();
             this.txtID = new DevExpress.XtraEditors.TextEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -50,11 +49,10 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuyPrise.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpStore.Properties)).BeginInit();
@@ -63,6 +61,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -70,6 +69,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,26 @@ namespace AlphaSSA.VIEW
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // txtBuyPrise
+            // 
+            this.txtBuyPrise.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtBuyPrise.Location = new System.Drawing.Point(12, 60);
+            this.txtBuyPrise.Name = "txtBuyPrise";
+            this.txtBuyPrise.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtBuyPrise.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtBuyPrise.Properties.MaskSettings.Set("mask", "n2");
+            this.txtBuyPrise.Properties.MaskSettings.Set("autoHideDecimalSeparator", true);
+            this.txtBuyPrise.Properties.MaskSettings.Set("hideInsignificantZeros", true);
+            this.txtBuyPrise.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
+            this.txtBuyPrise.Properties.UseMaskAsDisplayFormat = true;
+            this.txtBuyPrise.Size = new System.Drawing.Size(227, 20);
+            this.txtBuyPrise.StyleController = this.layoutControl1;
+            this.txtBuyPrise.TabIndex = 12;
+            // 
             // barcodeC
             // 
             this.barcodeC.Appearance.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,60 +136,12 @@ namespace AlphaSSA.VIEW
             this.barcodeC.Click += new System.EventHandler(this.barcodeC_Click);
             this.barcodeC.DoubleClick += new System.EventHandler(this.barcodeC_DoubleClick);
             // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5,
-            this.layoutControlItem6,
-            this.layoutControlItem7,
-            this.layoutControlItem8,
-            this.layoutControlItem9});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(618, 259);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem8
-            // 
-            this.layoutControlItem8.Control = this.barcodeC;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 120);
-            this.layoutControlItem8.MinSize = new System.Drawing.Size(54, 20);
-            this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(598, 119);
-            this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem8.TextVisible = false;
-            // 
-            // txtBuyPrise
-            // 
-            this.txtBuyPrise.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtBuyPrise.Location = new System.Drawing.Point(12, 60);
-            this.txtBuyPrise.Name = "txtBuyPrise";
-            this.txtBuyPrise.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtBuyPrise.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            this.txtBuyPrise.Properties.MaskSettings.Set("mask", "n2");
-            this.txtBuyPrise.Properties.MaskSettings.Set("autoHideDecimalSeparator", true);
-            this.txtBuyPrise.Properties.MaskSettings.Set("hideInsignificantZeros", true);
-            this.txtBuyPrise.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
-            this.txtBuyPrise.Properties.UseMaskAsDisplayFormat = true;
-            this.txtBuyPrise.Size = new System.Drawing.Size(227, 20);
-            this.txtBuyPrise.StyleController = this.layoutControl1;
-            this.txtBuyPrise.TabIndex = 12;
-            // 
             // txtQty
             // 
             this.txtQty.EditValue = "0";
             this.txtQty.Location = new System.Drawing.Point(211, 108);
             this.txtQty.Name = "txtQty";
+            this.txtQty.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.txtQty.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.White;
             this.txtQty.Properties.AppearanceReadOnly.ForeColor = System.Drawing.Color.Black;
             this.txtQty.Properties.AppearanceReadOnly.Options.UseBackColor = true;
@@ -179,6 +151,7 @@ namespace AlphaSSA.VIEW
             this.txtQty.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
             this.txtQty.Properties.MaskSettings.Set("hideInsignificantZeros", true);
             this.txtQty.Properties.MaskSettings.Set("autoHideDecimalSeparator", true);
+            this.txtQty.Properties.NullText = "0";
             this.txtQty.Properties.UseMaskAsDisplayFormat = true;
             this.txtQty.Size = new System.Drawing.Size(127, 20);
             this.txtQty.StyleController = this.layoutControl1;
@@ -248,6 +221,24 @@ namespace AlphaSSA.VIEW
             this.txtID.StyleController = this.layoutControl1;
             this.txtID.TabIndex = 4;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(618, 259);
+            this.Root.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.txtID;
@@ -311,6 +302,17 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem7.Text = "رصيد مبدئي";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(56, 13);
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.barcodeC;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(54, 20);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(598, 119);
+            this.layoutControlItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem8.TextVisible = false;
+            // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtBuyPrise;
@@ -323,7 +325,7 @@ namespace AlphaSSA.VIEW
             // frmAddProduct
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 305);
             this.Controls.Add(this.layoutControl1);
@@ -334,8 +336,6 @@ namespace AlphaSSA.VIEW
             this.Controls.SetChildIndex(this.layoutControl1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuyPrise.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lkpStore.Properties)).EndInit();
@@ -344,6 +344,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.txtPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -351,6 +352,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

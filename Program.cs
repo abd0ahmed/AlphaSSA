@@ -14,13 +14,9 @@ namespace AlphaSSA
         [STAThread]
         static void Main()
         {
-            
-            
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmInvNew frm = new frmInvNew(Internal.Master.InvoiceType.Sales);
-            Application.Run(frm);
+            Application.Run(new VIEW.FrmLogin());
         }
     }
 }

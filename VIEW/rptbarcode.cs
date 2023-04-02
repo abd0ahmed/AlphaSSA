@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 
 namespace AlphaSSA.VIEW
 {
@@ -22,7 +23,18 @@ namespace AlphaSSA.VIEW
             xrLabel2.ExpressionBindings.Add(new ExpressionBinding("BeforePrint", "Text", "Name"));
             xrLabel1.ExpressionBindings.Add(new ExpressionBinding("BeforePrint", "Text", "Price"));
             xrBarCode1.ExpressionBindings.Add(new ExpressionBinding("BeforePrint", "Text", "Barcode"));
+            getCompanyName();
             this.ShowPreview();
+        }
+        void getCompanyName()
+        {
+            using (var db=new SSADBDataContext())
+            {
+                lblCompanyName.Text = db.TblCompanyInfos.FirstOrDefault().Name;
+
+            }
+
+
         }
     }
 }

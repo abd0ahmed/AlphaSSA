@@ -101,5 +101,28 @@ namespace AlphaSSA.VIEW
         {
 
         }
+
+        private void ViewSales_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+
+        }
+
+        private void GridSales_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void اضافةمرتجعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int invoiceID = ((CLsProductInvoicesInfo)ViewSales.GetFocusedRow()).ID;
+            FrmReturn frm = new FrmReturn(Internal.Master.InvoiceType.salesReturn, invoiceID);
+            frm.ShowDialog();
+        }
+
+        private void طباعةالفاتورةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvNew frm = new frmInvNew();
+            
+        }
     }
 }

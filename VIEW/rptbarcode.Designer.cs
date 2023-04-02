@@ -33,10 +33,11 @@ namespace AlphaSSA.VIEW
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.lblCompanyName = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -54,6 +55,7 @@ namespace AlphaSSA.VIEW
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblCompanyName,
             this.xrPanel1,
             this.xrBarCode1});
             this.Detail.Dpi = 254F;
@@ -64,21 +66,18 @@ namespace AlphaSSA.VIEW
             this.Detail.Name = "Detail";
             this.Detail.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
             // 
-            // xrBarCode1
+            // xrPanel1
             // 
-            this.xrBarCode1.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right;
-            this.xrBarCode1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
-            this.xrBarCode1.AutoModule = true;
-            this.xrBarCode1.Dpi = 254F;
-            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 47.77058F);
-            this.xrBarCode1.Module = 2.54F;
-            this.xrBarCode1.Name = "xrBarCode1";
-            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(26, 26, 0, 0, 254F);
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(379F, 122.7299F);
-            this.xrBarCode1.StylePriority.UseTextAlignment = false;
-            this.xrBarCode1.Symbology = code128Generator1;
-            this.xrBarCode1.Text = "123";
-            this.xrBarCode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrPanel1.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right;
+            this.xrPanel1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
+            this.xrPanel1.CanGrow = false;
+            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
+            this.xrLabel2});
+            this.xrPanel1.Dpi = 254F;
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 170.5005F);
+            this.xrPanel1.Name = "xrPanel1";
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(379F, 54.49953F);
             // 
             // xrLabel1
             // 
@@ -116,18 +115,33 @@ namespace AlphaSSA.VIEW
             this.xrLabel2.Text = "text";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrPanel1
+            // xrBarCode1
             // 
-            this.xrPanel1.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right;
-            this.xrPanel1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
-            this.xrPanel1.CanGrow = false;
-            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel1,
-            this.xrLabel2});
-            this.xrPanel1.Dpi = 254F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 170.5005F);
-            this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(379F, 54.49953F);
+            this.xrBarCode1.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right;
+            this.xrBarCode1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
+            this.xrBarCode1.AutoModule = true;
+            this.xrBarCode1.Dpi = 254F;
+            this.xrBarCode1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 47.77058F);
+            this.xrBarCode1.Module = 2.54F;
+            this.xrBarCode1.Name = "xrBarCode1";
+            this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(26, 26, 0, 0, 254F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(379F, 122.7299F);
+            this.xrBarCode1.StylePriority.UseTextAlignment = false;
+            this.xrBarCode1.Symbology = code128Generator1;
+            this.xrBarCode1.Text = "123";
+            this.xrBarCode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // lblCompanyName
+            // 
+            this.lblCompanyName.Dpi = 254F;
+            this.lblCompanyName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.lblCompanyName.Multiline = true;
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblCompanyName.SizeF = new System.Drawing.SizeF(379F, 47.77058F);
+            this.lblCompanyName.StylePriority.UseFont = false;
+            this.lblCompanyName.Text = "WayStore";
             // 
             // rptbarcode
             // 
@@ -145,7 +159,7 @@ namespace AlphaSSA.VIEW
             this.RollPaper = true;
             this.SnapGridSize = 25F;
             this.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.Version = "20.2";
+            this.Version = "22.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -159,5 +173,6 @@ namespace AlphaSSA.VIEW
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRLabel lblCompanyName;
     }
 }

@@ -20,14 +20,22 @@ namespace AlphaSSA.VIEW
         BindingList<ClsInvoiceReturnModel> returnProducts;
         List<TbLInvoiceDetaile> tbLInvoiceDetailes;
         TblInvoiceHeader Header;
-        List<TbLInvoiceDetaile> InvoiceDetailes;
         SSADBDataContext db;
         List<TbLInvoiceDetaile> other;
+        int invoiceID = 0;
         public FrmReturn(Master.InvoiceType InvType)
         {
             InitializeComponent();
             invType = InvType;
             New();
+        }
+        public FrmReturn(Master.InvoiceType InvType,int InvoiceID)
+        {
+            InitializeComponent();
+            this.invoiceID = InvoiceID;
+            invType = InvType;
+            New();
+            
         }
         public override void Save()
         {
@@ -39,6 +47,8 @@ namespace AlphaSSA.VIEW
 
                 SetData();
                 Header.shift = db.TblShifts.Select(x=>x.ID).MaxOrDefault();
+                Header.Time = DateTime.Now.TimeOfDay;
+                Header.Date = DateTime.Now;
                 var sourceHeader = db.TblInvoiceHeaders.SingleOrDefault(x => x.ID == (int)lkpInvoiceCode.EditValue);
                 db.TblInvoiceHeaders.InsertOnSubmit(Header);
                 db.SubmitChanges();
@@ -324,10 +334,13 @@ namespace AlphaSSA.VIEW
             lkpInvoiceCode.Properties.Columns[nameof(TblInvoiceHeader.net)].Caption = "صافي";
             lkpInvoiceCode.Properties.Columns[nameof(TblInvoiceHeader.Total)].Caption = "اجمال";
             lkpInvoiceCode.Properties.Columns[nameof(TblInvoiceHeader.Time)].Caption = "وقت";
-
+            if (invoiceID>0)
+            {
+                GetInvoiceData(invoiceID);
+            }
         }
 
-        void GetInvoiceData()
+        void GetInvoiceData(int invoiceID=0)
         {
             using (var db = new SSADBDataContext())
             {
@@ -335,7 +348,7 @@ namespace AlphaSSA.VIEW
                 invoiceProducts = new BindingList<ClsInvoiceReturnModel>(
                     (from p in db.TblProducts
                      join ip in db.TbLInvoiceDetailes on p.ID equals ip.itemID
-                     where ip.InvoiceID == (int)lkpInvoiceCode.EditValue
+                     where ip.InvoiceID ==(invoiceID==0? (int)lkpInvoiceCode.EditValue:invoiceID)
                      select new ClsInvoiceReturnModel()
                      {
                          ID = p.ID,
@@ -347,8 +360,8 @@ namespace AlphaSSA.VIEW
                      }).ToList());
                 other = (from ih in db.TblInvoiceHeaders
                                                  join id in db.TbLInvoiceDetailes on ih.ID equals id.InvoiceID
-                                                 where ih.SourceID == (int)lkpInvoiceCode.EditValue
-                                                 select id).ToList();
+                                                 where ih.SourceID == (invoiceID == 0 ? (int)lkpInvoiceCode.EditValue : invoiceID)
+                         select id).ToList();
             }
             if (other!=null)
             {
@@ -375,6 +388,7 @@ namespace AlphaSSA.VIEW
             LkpProductCode.Properties.Columns[nameof(ClsInvoiceReturnModel.totalPrice)].Visible = false;
 
         }
+        
 
         private void gridView1_Click(object sender, EventArgs e)
         {

@@ -29,6 +29,7 @@ namespace AlphaSSA.VIEW
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductDetails));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
@@ -80,6 +81,9 @@ namespace AlphaSSA.VIEW
             this.ViewQty = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabSales = new DevExpress.XtraTab.XtraTabPage();
             this.GridSales = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.طباعةالفاتورةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةمرتجعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ViewSales = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabBrchases = new DevExpress.XtraTab.XtraTabPage();
             this.GridBurchase = new DevExpress.XtraGrid.GridControl();
@@ -142,6 +146,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.ViewQty)).BeginInit();
             this.tabSales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridSales)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewSales)).BeginInit();
             this.tabBrchases.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridBurchase)).BeginInit();
@@ -767,6 +772,7 @@ namespace AlphaSSA.VIEW
             // 
             // GridSales
             // 
+            this.GridSales.ContextMenuStrip = this.contextMenuStrip1;
             this.GridSales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridSales.Location = new System.Drawing.Point(0, 0);
             this.GridSales.MainView = this.ViewSales;
@@ -775,12 +781,37 @@ namespace AlphaSSA.VIEW
             this.GridSales.TabIndex = 0;
             this.GridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewSales});
+            this.GridSales.DoubleClick += new System.EventHandler(this.GridSales_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.طباعةالفاتورةToolStripMenuItem,
+            this.اضافةمرتجعToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(144, 48);
+            // 
+            // طباعةالفاتورةToolStripMenuItem
+            // 
+            this.طباعةالفاتورةToolStripMenuItem.Name = "طباعةالفاتورةToolStripMenuItem";
+            this.طباعةالفاتورةToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.طباعةالفاتورةToolStripMenuItem.Text = "طباعة الفاتورة";
+            this.طباعةالفاتورةToolStripMenuItem.Click += new System.EventHandler(this.طباعةالفاتورةToolStripMenuItem_Click);
+            // 
+            // اضافةمرتجعToolStripMenuItem
+            // 
+            this.اضافةمرتجعToolStripMenuItem.Name = "اضافةمرتجعToolStripMenuItem";
+            this.اضافةمرتجعToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.اضافةمرتجعToolStripMenuItem.Text = "اضافة مرتجع";
+            this.اضافةمرتجعToolStripMenuItem.Click += new System.EventHandler(this.اضافةمرتجعToolStripMenuItem_Click);
             // 
             // ViewSales
             // 
             this.ViewSales.GridControl = this.GridSales;
             this.ViewSales.Name = "ViewSales";
             this.ViewSales.OptionsBehavior.Editable = false;
+            this.ViewSales.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.ViewSales_RowClick);
             // 
             // tabBrchases
             // 
@@ -828,7 +859,7 @@ namespace AlphaSSA.VIEW
             // FrmProductDetails
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 613);
             this.Controls.Add(this.layoutControl1);
@@ -893,6 +924,7 @@ namespace AlphaSSA.VIEW
             ((System.ComponentModel.ISupportInitialize)(this.ViewQty)).EndInit();
             this.tabSales.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridSales)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ViewSales)).EndInit();
             this.tabBrchases.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridBurchase)).EndInit();
@@ -962,5 +994,8 @@ namespace AlphaSSA.VIEW
         private DevExpress.XtraGrid.Views.Grid.GridView ViewQty;
         private DevExpress.XtraGrid.GridControl GridSales;
         private DevExpress.XtraGrid.Views.Grid.GridView ViewSales;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem طباعةالفاتورةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اضافةمرتجعToolStripMenuItem;
     }
 }

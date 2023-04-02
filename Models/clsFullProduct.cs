@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using static AlphaSSA.Internal.Master;
 
 namespace AlphaSSA.Models
 {
@@ -81,6 +82,7 @@ namespace AlphaSSA.Models
                                   join d in db.TbLInvoiceDetailes on h.ID equals d.InvoiceID
                                   join s in db.TblSallers on h.Saller equals s.ID
                                   join c in db.TblClients on h.ClientID equals c.ID
+                                  
                                   where d.itemID == ID
                                   select new CLsProductInvoicesInfo(d.itemID??0)
                                   {
@@ -97,6 +99,10 @@ namespace AlphaSSA.Models
                                       Total = h.Total
                                       ,_saller=s.Name
                                       ,Client=c.Name
+                                      ,shift=h.shift
+                                      ,Time=h.Time
+                                      
+                                      
                                   }
                            ).ToList();
             }
