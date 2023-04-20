@@ -193,4 +193,7 @@
   <data name="icons8-whatsapp (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-whatsapp (1).svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="String" xml:space="preserve">
+    <value>MainFrm</value>
+  </data>
 </root>

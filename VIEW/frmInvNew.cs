@@ -1,5 +1,6 @@
 ﻿using AlphaSSA.Internal;
 using AlphaSSA.Models;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -265,7 +266,7 @@ namespace AlphaSSA.VIEW
             using (invDb = new SSADBDataContext())
 
             {
-                product = Products.Single(x => x.barcode == txtBarcode.EditValue.ToString().ToUpper());
+                product = Products.SingleOrDefault(x => x.barcode == txtBarcode.EditValue.ToString().ToUpper());
                 // product = invDb.TblProducts.SingleOrDefault(x => x.barcode ==  txtSearch.EditValue.ToString().Trim());
                 InvoiceProduct = new ClsInvoiceProducts();
                 if (product == null)
@@ -572,7 +573,10 @@ namespace AlphaSSA.VIEW
         private void lblDiscount_TextChanged(object sender, EventArgs e)
         { lblNet.Text = (decimal.Parse(lblTotal.Text) - decimal.Parse(lblDiscount.Text)).ToString(); }
 
-        private void lblFormHead_DoubleClick(object sender, EventArgs e) { WindowState = FormWindowState.Minimized; }
+        private void lblFormHead_DoubleClick(object sender, EventArgs e) { this.WindowState = FormWindowState.Maximized;
+            this.Hide()
+                ;this.ShowInTaskbar = true;
+        }
 
         private void lblFormHead_Paint(object sender, PaintEventArgs e)
         {
@@ -767,7 +771,9 @@ namespace AlphaSSA.VIEW
             {
                 getProductData();
                 txtBarcode.Text = string.Empty;
+                txtBarcode.Focus();
             }
+            
         }
 
         private void txtsearch_EditValueChanged(object sender, EventArgs e)

@@ -154,12 +154,12 @@ namespace AlphaSSA.VIEW
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.layoutControl7 = new DevExpress.XtraLayout.LayoutControl();
             this.sidepanel1 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage2.SuspendLayout();
@@ -1949,16 +1949,6 @@ namespace AlphaSSA.VIEW
             this.simpleButton6.TabIndex = 29;
             this.simpleButton6.Text = "نقص الكمية";
             // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.ContainerControl = this;
-            this.guna2DragControl1.DockForm = true;
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.5D;
-            this.guna2DragControl1.DragStartTransparencyValue = 0.8D;
-            this.guna2DragControl1.TargetControl = this.lblFormHead;
-            this.guna2DragControl1.TransparentWhileDrag = true;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
             // layoutControl7
             // 
             this.layoutControl7.Controls.Add(this.sidepanel1);
@@ -2013,6 +2003,13 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem25.Size = new System.Drawing.Size(388, 716);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this.lblFormHead;
+            this.guna2DragControl1.TransparentWhileDrag = true;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // frmInvNew
             // 
@@ -2238,7 +2235,6 @@ namespace AlphaSSA.VIEW
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private DevExpress.XtraEditors.SimpleButton BtnRetrev;
         private DevExpress.XtraGrid.Columns.GridColumn ColID;
         private DevExpress.XtraGrid.Columns.GridColumn ColItemName;
@@ -2256,5 +2252,6 @@ namespace AlphaSSA.VIEW
         private DevExpress.XtraEditors.PanelControl panelControl12;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

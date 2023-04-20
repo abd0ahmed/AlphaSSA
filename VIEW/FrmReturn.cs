@@ -1,5 +1,6 @@
 ﻿using AlphaSSA.Internal;
 using AlphaSSA.Models;
+using DevExpress.DataProcessing;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Popup;
@@ -23,6 +24,7 @@ namespace AlphaSSA.VIEW
         SSADBDataContext db;
         List<TbLInvoiceDetaile> other;
         int invoiceID = 0;
+        bool saved = false;
         public FrmReturn(Master.InvoiceType InvType)
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace AlphaSSA.VIEW
         }
         public override void Save()
         {
+            if (saved) return;
             Header = new TblInvoiceHeader();
             tbLInvoiceDetailes = new List<TbLInvoiceDetaile>();
 
@@ -81,9 +84,9 @@ namespace AlphaSSA.VIEW
                 db.SubmitChanges();
 
             }
-            
 
-
+            saved = true;
+            XtraMessageBox.Show("تم الحفظ");
 
         }
        byte GetInvoiceType()
@@ -429,6 +432,7 @@ namespace AlphaSSA.VIEW
 
         public override void New()
         {
+            saved = false;
             lkpInvoiceCode.Enabled = true;
             product = new ClsInvoiceReturnModel();
             returnProducts = new BindingList<ClsInvoiceReturnModel>();
