@@ -13,7 +13,7 @@ namespace AlphaSSA.VIEW
     {
         TblInvoiceHeader Header;
         
-        bool FastPrint;
+      
         public RptInvoice()
         {
             InitializeComponent();

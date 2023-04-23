@@ -25,26 +25,26 @@ namespace AlphaSSA.VIEW
         {
              clsFullProduct = new clsFullProduct(productDetails.ID);
             
-            GridBurchase.DataSource = clsFullProduct.BurchaseInvoices;
-            GridSales.DataSource = clsFullProduct.salesInvoices;
-            GridQty.DataSource = clsFullProduct.StoreProducts;
+            //GridBurchase.DataSource = clsFullProduct.BurchaseInvoices;
+            //GridSales.DataSource = clsFullProduct.salesInvoices;
+            //GridQty.DataSource = clsFullProduct.StoreProducts;
 
-            txtInvoiceCount.Text = (((List<CLsProductInvoicesInfo>)GridSales.DataSource).Count().ToString());
-            txtSellsCount.Text = clsFullProduct.SalesCount.ToString();
-            txtSellReturnCount.Text = clsFullProduct.salesretInvoices.Count().ToString();
-            txtBuyPrise.Text = clsFullProduct.BuyPrise.ToString();
-            var LastsellInv= clsFullProduct.salesInvoices.LastOrDefault();
-            if (LastsellInv!=null)
-            {
-                txtLastInvoice.EditValue=((DateTime)LastsellInv.Date).ToString("dd/MM/yyyy");
-            }
+            //txtInvoiceCount.Text = (((List<CLsProductInvoicesInfo>)GridSales.DataSource).Count().ToString());
+            //txtSellsCount.Text = clsFullProduct.SalesCount.ToString();
+            //txtSellReturnCount.Text = clsFullProduct.salesretInvoices.Count().ToString();
+            //txtBuyPrise.Text = clsFullProduct.BuyPrise.ToString();
+            //var LastsellInv= clsFullProduct.salesInvoices.LastOrDefault();
+            //if (LastsellInv!=null)
+            //{
+            //    txtLastInvoice.EditValue=((DateTime)LastsellInv.Date).ToString("dd/MM/yyyy");
+            //}
              
-            txtPurchasesCount.Text= clsFullProduct.BurchaseInvoices.Count().ToString();
-            var LastPurlInv = clsFullProduct.BurchaseInvoices.LastOrDefault();
-            if (LastPurlInv != null)
-            {
-                txtLastPurchase.Text = ((DateTime)LastPurlInv.Date).ToString("dd/MM/yyyy") ?? "";
-            }
+            //txtPurchasesCount.Text= clsFullProduct.BurchaseInvoices.Count().ToString();
+            //var LastPurlInv = clsFullProduct.BurchaseInvoices.LastOrDefault();
+            //if (LastPurlInv != null)
+            //{
+            //    txtLastPurchase.Text = ((DateTime)LastPurlInv.Date).ToString("dd/MM/yyyy") ?? "";
+            //}
            
             txtPInvoiceCount.Text= (((List<CLsProductInvoicesInfo>)GridBurchase.DataSource).Count().ToString());
             txtBurchaseReturnCount.Text= clsFullProduct.PurchaseinvCount.ToString();
@@ -122,7 +122,6 @@ namespace AlphaSSA.VIEW
         private void طباعةالفاتورةToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmInvNew frm = new frmInvNew();
-            
         }
     }
 }

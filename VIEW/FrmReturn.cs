@@ -95,14 +95,13 @@ namespace AlphaSSA.VIEW
             {
                 case Master.InvoiceType.Sales:
                     return (byte)Master.InvoiceType.salesReturn;
-                    break;
+
                 case Master.InvoiceType.Purchase:
-                    return  (byte)Master.InvoiceType.PurchaseReturn;
-                    break;
+                    return (byte)Master.InvoiceType.PurchaseReturn;
+
 
                 default:
                     return 0;
-                    break;
             }
 
 

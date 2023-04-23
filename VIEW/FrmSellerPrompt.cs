@@ -13,9 +13,9 @@ namespace AlphaSSA.VIEW
 {
     public partial class FrmSellerPrompt : DevExpress.XtraEditors.XtraForm
     {
-        decimal dd=0;
+        
         UCInvSeller uc;
-        bool co;
+       
         public FrmSellerPrompt(UCInvSeller uc )
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace AlphaSSA.VIEW
 
         private void BtnFastSave_Click(object sender, EventArgs e)
         {
-            uc.SetClientID((int.Parse(txtID.Text.Trim())),co);
+            uc.SetClientID((int.Parse(txtID.Text.Trim())));
             this.Dispose();
         }
 

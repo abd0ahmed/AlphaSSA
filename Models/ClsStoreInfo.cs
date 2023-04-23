@@ -28,26 +28,17 @@ namespace AlphaSSA.Models
             {
                 using (db = new SSADBDataContext())
                 {
-
                     _Products = (from pr in db.TblProducts
                                 join stpr in db.TblStoreProducts
                                 on pr.ID equals stpr.productID
                                 where stpr.StoreID == ID
-                                select new clsFullProduct(db,pr.ID)
-                                {
-                                    
-                                    Name = pr.Name,
-                                    price = pr.price,
-                                    BuyPrise=pr.BuyPrise
-
-                                }).ToList();
+                                select new clsFullProduct(pr.ID,db)).ToList();
                     return _Products;
                 }
             }
 
             return _Products;
         }
-
         int  Get_ProductsCount()
         {
             if (_ProductsCount==0)
@@ -56,35 +47,24 @@ namespace AlphaSSA.Models
                 return _ProductsCount;
             }
             return _ProductsCount;
-
-
-
         }
         int Get_ProductsQty()
         {
-
             if (_ProductsQty == 0)
             {
                 _ProductsQty=Products.Select(x=>x.Qty).Sum();
                 return _ProductsQty;
             }
             return _ProductsQty;
-
-
-
         }
         decimal Get_StoreValue()
         {
-
             if (_StoreValue == 0)
             {
                 _StoreValue= Products.Select(x=>x.ProductBuyValue).Sum();
                 return _StoreValue;
             }
             return _StoreValue;
-
-
-
         }
     }
 

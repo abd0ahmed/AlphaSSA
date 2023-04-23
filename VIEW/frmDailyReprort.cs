@@ -17,7 +17,7 @@ namespace AlphaSSA.VIEW
 {
     public partial class frmDailyReprort : DevExpress.XtraEditors.XtraForm
     {
-        TblShift shift;
+       
         SSADBDataContext db;
         TblInvoiceHeader currentRow;
         GridView gv;
@@ -124,7 +124,7 @@ namespace AlphaSSA.VIEW
         {
             if (e.Column.FieldName == nameof(TblInvoiceHeader.Time))
             {
-                DateTime dt;
+               
                 var s = DateTime.Today.Add((TimeSpan)e.Value);
                 e.DisplayText = s.ToShortTimeString();
             }
@@ -134,7 +134,7 @@ namespace AlphaSSA.VIEW
                 int.TryParse(e.Value.ToString(), out R);
             }
            
-            if (e.Column.FieldName == nameof(TblInvoiceHeader.invoiceType) && R != null)
+            if (e.Column.FieldName == nameof(TblInvoiceHeader.invoiceType) )
             {
                 e.DisplayText = Internal.Master.InvoiceTypes.SingleOrDefault(x => x.ID == int.Parse(e.Value.ToString())).value;
             }

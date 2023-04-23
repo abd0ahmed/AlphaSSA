@@ -22,7 +22,8 @@ namespace AlphaSSA.VIEW
 
             using (db = new SSADBDataContext())
             {
-                clsCats = new List<clsCatDetails>(db.TblCategories.Select(i => new clsCatDetails { ID = i.ID, Name = i.Name, barcode = i.barcode }));
+                clsCats = (from cd in db.TblCategories
+                           select new clsCatDetails(cd)).ToList();
             }
             gridControl1.DataSource = clsCats;
             gridView1.PopulateColumns();

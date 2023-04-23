@@ -16,7 +16,7 @@ namespace AlphaSSA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VIEW.FrmLogin());
+            Application.Run(new VIEW.FrmMain());
         }
     }
 }

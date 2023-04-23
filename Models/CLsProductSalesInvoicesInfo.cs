@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace AlphaSSA.Models
             
         }
 
-        public CLsProductInvoicesInfo(int ID)
+        public CLsProductInvoicesInfo(int ID) 
         {
             itemid = ID;
         }

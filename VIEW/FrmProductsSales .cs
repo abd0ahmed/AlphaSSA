@@ -14,7 +14,7 @@ namespace AlphaSSA.VIEW
 {
     public partial class FrmProductsSales: DevExpress.XtraEditors.XtraForm
     {
-        TblShift shift;
+   
         SSADBDataContext db;
         public FrmProductsSales()
         {

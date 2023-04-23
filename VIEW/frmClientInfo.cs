@@ -16,7 +16,7 @@ namespace AlphaSSA.VIEW
     public partial class frmClientInfo : FrmMAster
     {
         ClsClientInfo clientInfo=new ClsClientInfo();
-        SSADBDataContext db;
+       
         
 
         public frmClientInfo(ClsClientInfo info)

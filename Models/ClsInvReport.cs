@@ -14,7 +14,7 @@ namespace AlphaSSA.Models
         public decimal totalPurchase { get; set; }
         public decimal totalSalesRet { get; set; }
         public decimal TodalpurchaseRet { get; set; }
-        List<InvoiceReportModel> ds;
+        
         public ClsInvReport(DateTime dateFrom, DateTime dateTo)
         {
             this.dateFrom = dateFrom;this.dateTo = dateTo;

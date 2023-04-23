@@ -11,25 +11,42 @@ namespace AlphaSSA.Models
     public class clsCatDetails : TblCategory
     {
         SSADBDataContext db;
-        
-        [Browsable(true)]
-        [Display(AutoGenerateField = false)]
-        [ScaffoldColumn(false)]
-        List<clsFullProduct> tblProducts;
-        [ScaffoldColumn(false)]
-        public List<clsFullProduct> Products { get { return _Products(); } }
+
+
+        public List<clsFullProduct> tblProducts;
         [Display(Name = "عدد المنتجات")]
         public int ProductsCount { get { return GetProductsCount(); } }
         [Display(Name = "القيمة الاجمالية")]
-        public string CatVaLue { get { return GetProductsValue() + " جم"; } }
+        public string CatVaLue { get { return GetProductsBuyValue() + " جم"; } }
         [Display(Name = "عدد القطع")]
         public int FullCount { get { return GetFullCount(); } }
+        public clsCatDetails(TblCategory category)
+        {
+            ID = category.ID;
+            Name = category.Name;
+            barcode = category.barcode;
+            GetProducts();
+        }
+
+        private void GetProducts()
+        {
+            using (db = new SSADBDataContext())
+            {
+                var data = (from p in db.TblProducts
+                            join cat in db.TblCategories on p.cat equals cat.ID
+                            where cat.ID == ID
+                            select new clsFullProduct(p.ID, db)
+                 ).ToList();
+
+                tblProducts = data;
+            }
+        }
 
         private int GetFullCount()
         {
             if (tblProducts != null)
             {
-                return Products.Select(x=>x.Qty).Sum();
+                return tblProducts.Select(x => x.Qty).Sum();
             }
             else
             {
@@ -39,7 +56,7 @@ namespace AlphaSSA.Models
 
         int GetProductsCount()
         {
-            if (tblProducts!=null)
+            if (tblProducts != null)
             {
                 return tblProducts.Count;
             }
@@ -48,48 +65,29 @@ namespace AlphaSSA.Models
                 return 0;
             }
         }
-        
+
         decimal? GetProductsValue()
         {
             if (tblProducts != null)
             {
-                return tblProducts.Select (x => x.BuyPrise *x.Qty).Sum();
+                return tblProducts.Select(x => x.ProductValue).Sum();
             }
             else
             {
                 return 0;
             }
         }
-        [Display(Name = "المنتجات")]
-        [Browsable(true)]
-
-        
-        private List<Models.clsFullProduct> _Products()
+        decimal? GetProductsBuyValue()
         {
-            if (tblProducts==null)
+            if (tblProducts != null)
             {
-                using (db = new SSADBDataContext())
-                {
-                    var data = (from p in db.TblProducts
-                                join cat in db.TblCategories on p.cat equals cat.ID
-                                where cat.ID == ID
-                                select new clsFullProduct(p.ID)
-                                {
-                                    Name = p.Name,
-                                    price = p.price
-                                   , barcode = p.barcode
-                                   ,cat=p.cat
-                                   ,BuyPrise=p.BuyPrise
-                                }
-                     ).ToList();
-
-                    tblProducts = data;
-                }
+                return tblProducts.Select(x => x.ProductBuyValue).Sum();
             }
-          
-                return tblProducts??new List<clsFullProduct>();
-            
-
+            else
+            {
+                return 0;
+            }
         }
+
     }
 }

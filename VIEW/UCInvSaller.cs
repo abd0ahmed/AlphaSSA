@@ -106,7 +106,7 @@ namespace AlphaSSA.VIEW
 
         private void textEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (e.Button.Tag=="Edit" )
+            if ((string)e.Button.Tag=="Edit" )
             {
                 FrmSaller frm = new FrmSaller();
                 frm.ShowDialog();
