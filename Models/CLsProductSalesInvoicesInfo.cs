@@ -26,7 +26,7 @@ namespace AlphaSSA.Models
         public string _saller { get; set; }
         [Display(Name = "العميل")]
         public string Client { get; set; }
-        int? _qty = null;
+        public int? _qty = null;
         [Display(Name = "كمية")]
         public int qty { get { return GetProductInvQty(); } }
         [Display(Name = "م")]

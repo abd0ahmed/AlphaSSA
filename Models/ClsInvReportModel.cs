@@ -28,24 +28,10 @@ namespace AlphaSSA.Models
         public decimal? SellPrice { get; set; }
         [Display(Name = "كمية")]
         public int? ItemQty { get; set; }
-       
         [Display(Name = "احمالي")]
         public decimal? TotalPrice { get; set; }
         [Display(Name = "البائع")]
         public string SallerName { get; set; }
-       
         public int? invoiceType { get; set; }
-
-        /* th.code,
-                                                      invoiceDate= th.Date,
-                                                       th.Time,
-                                                       pr.Name,
-                                                       pr.barcode,
-                                                       pr.BuyPrise,
-                                                       pr.price,
-                                                       dt.itemQty,
-                                                       dt.TotalPrice,
-                                                       SallerNAme = sa.Name
-        */
     }
 }

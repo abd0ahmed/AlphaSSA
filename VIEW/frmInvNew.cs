@@ -674,7 +674,7 @@ namespace AlphaSSA.VIEW
             Header.Time = Getinvoicetime();
             Header.net = decimal.Parse(lblNet.Text);
             Header.Total = decimal.Parse(lblTotal.Text);
-            Header.Discount = (decimal?)decimal.Parse(lblDiscount.Text) ?? 0; // ToDo:Get Value From UserControl
+            Header.Discount = (decimal?)decimal.Parse(lblDiscount.Text) ?? 0; 
             Header.invoiceType = (byte)InvoiceType;
             Header.Saller = uCInvSeller.GetClientID();
             Header.shift = UCShift.getCurrentShift().ID;

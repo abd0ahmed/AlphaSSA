@@ -11,9 +11,11 @@ namespace AlphaSSA.Models
 {
     public class clsFullProduct 
     {
-
+        public TblProduct TblProduct { get; set; }
         [Display(Name = "اجمالي قيمة بيع")]
         public decimal ProductValue { get { return ProductProcessor.ProductValue; } }
+        [Display(Name = "كميات المخازن")]
+        public object StoreProductsDs { get { return ProductProcessor.StoreProductsDs; } }
 
         [Display(Name = "اجمالي قيمة شراء")]
         public decimal ProductBuyValue { get { return ProductProcessor.ProductBuyValue; } }
@@ -21,19 +23,21 @@ namespace AlphaSSA.Models
         [Display(Name = "اجمالي كميات المخازن")]
         public int Qty { get { return ProductProcessor.Qty; } }
 
-       // [Display(Name = "فواتير البيع")]
-        //public List<CLsProductInvoicesInfo> salesInvoices { get { return ProductProcessor.SalesInvoices; } }
+        [Display(Name = "فواتير البيع")]
+        public List<ProductFullIvoiceDataModel> salesInvoices { get { return ProductProcessor.SalesInvoices; } }
 
-       // [Display(Name = "فواتير الشراء")]
-        //public List<CLsProductInvoicesInfo> BurchaseInvoices { get { return GetBurchaseInvoices(); } }
+        [Display(Name = "فواتير الشراء")]
+        public List<ProductFullIvoiceDataModel> BurchaseInvoices { get { return ProductProcessor.PurchaseInvoices; } }
 
-        //[Display(Name = "فواتير مرتجع بيع")]
-        //public List<CLsProductInvoicesInfo> salesretInvoices { get { return GetSalesretInvoices(); } }
+        [Display(Name = "فواتير مرتجع بيع")]
+        public List<ProductFullIvoiceDataModel> salesretInvoices { get { return ProductProcessor.SalesRetInvoices; } }
 
-        //[Display(Name = "فواتير مرتجع شراء")]
-        //public List<CLsProductInvoicesInfo> BurchaseretInvoices { get { return GetBurchaseretInvoices(); } }
+        [Display(Name = "فواتير مرتجع شراء")]
+        public List<ProductFullIvoiceDataModel> BurchaseretInvoices
 
-        
+        { get 
+            { return ProductProcessor.PurchaseRetInvoices;} 
+        }
         [Display(Name = "عدد فواتير البيع")]
         public int SalesinvCount
         {
@@ -55,6 +59,7 @@ namespace AlphaSSA.Models
         {
             get { return ProductProcessor.PurchaseinvCount; }
         }
+        public string CatName { get { return ProductProcessor.CatName; } }
         public clsFullProduct()
         {
            
@@ -62,9 +67,11 @@ namespace AlphaSSA.Models
         }
         public clsFullProduct(TblProduct tblProduct)
         {
+            this.TblProduct = tblProduct;
             using (var db = new SSADBDataContext())
             {
-                ProductProcessor = new FullProductProcessor(tblProduct.ID, db);
+                ProductProcessor = new FullProductProcessor(TblProduct.ID, db);
+                TblProduct = ProductProcessor.Product;
             }
             
         }

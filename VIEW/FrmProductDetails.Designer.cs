@@ -88,8 +88,25 @@ namespace AlphaSSA.VIEW
             this.tabBrchases = new DevExpress.XtraTab.XtraTabPage();
             this.GridBurchase = new DevExpress.XtraGrid.GridControl();
             this.ViewBurchase = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.TabSalesRet = new DevExpress.XtraTab.XtraTabPage();
+            this.GridSalesRet = new DevExpress.XtraGrid.GridControl();
+            this.ViewSalesRet = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabPurchaseRet = new DevExpress.XtraTab.XtraTabPage();
+            this.GridPurchaseRet = new DevExpress.XtraGrid.GridControl();
+            this.ViewPurchaseRet = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabStoreConv = new DevExpress.XtraTab.XtraTabPage();
+            this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabLog = new DevExpress.XtraTab.XtraTabPage();
+            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.label2 = new System.Windows.Forms.Label();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -151,8 +168,23 @@ namespace AlphaSSA.VIEW
             this.tabBrchases.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridBurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBurchase)).BeginInit();
+            this.TabSalesRet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridSalesRet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewSalesRet)).BeginInit();
+            this.tabPurchaseRet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridPurchaseRet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewPurchaseRet)).BeginInit();
+            this.tabStoreConv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.tabLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -178,13 +210,17 @@ namespace AlphaSSA.VIEW
             this.tabSummary,
             this.tabQty,
             this.tabSales,
-            this.tabBrchases});
+            this.tabBrchases,
+            this.TabSalesRet,
+            this.tabPurchaseRet,
+            this.tabStoreConv,
+            this.tabLog});
             // 
             // tabSummary
             // 
             this.tabSummary.Controls.Add(this.layoutControl2);
             this.tabSummary.Name = "tabSummary";
-            this.tabSummary.Size = new System.Drawing.Size(891, 518);
+            this.tabSummary.Size = new System.Drawing.Size(891, 516);
             this.tabSummary.Text = "بيانات المنتج";
             // 
             // layoutControl2
@@ -197,7 +233,7 @@ namespace AlphaSSA.VIEW
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(891, 518);
+            this.layoutControl2.Size = new System.Drawing.Size(891, 516);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -206,7 +242,7 @@ namespace AlphaSSA.VIEW
             this.panel3.Controls.Add(this.layoutControl5);
             this.panel3.Location = new System.Drawing.Point(12, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 133);
+            this.panel3.Size = new System.Drawing.Size(270, 132);
             this.panel3.TabIndex = 6;
             // 
             // layoutControl5
@@ -220,7 +256,7 @@ namespace AlphaSSA.VIEW
             this.layoutControl5.Name = "layoutControl5";
             this.layoutControl5.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl5.Root = this.layoutControlGroup4;
-            this.layoutControl5.Size = new System.Drawing.Size(270, 133);
+            this.layoutControl5.Size = new System.Drawing.Size(270, 132);
             this.layoutControl5.TabIndex = 0;
             this.layoutControl5.Text = "layoutControl5";
             // 
@@ -299,7 +335,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem15,
             this.layoutControlItem16});
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(270, 133);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(270, 132);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // layoutControlItem13
@@ -319,7 +355,7 @@ namespace AlphaSSA.VIEW
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(250, 17);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(250, 16);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
@@ -363,7 +399,7 @@ namespace AlphaSSA.VIEW
             this.panel2.Controls.Add(this.layoutControl4);
             this.panel2.Location = new System.Drawing.Point(286, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 133);
+            this.panel2.Size = new System.Drawing.Size(282, 132);
             this.panel2.TabIndex = 5;
             // 
             // layoutControl4
@@ -377,7 +413,7 @@ namespace AlphaSSA.VIEW
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl4.Root = this.layoutControlGroup3;
-            this.layoutControl4.Size = new System.Drawing.Size(282, 133);
+            this.layoutControl4.Size = new System.Drawing.Size(282, 132);
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -456,7 +492,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem10,
             this.layoutControlItem11});
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(282, 133);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(282, 132);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem8
@@ -475,7 +511,7 @@ namespace AlphaSSA.VIEW
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(262, 17);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(262, 16);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem9
@@ -516,7 +552,7 @@ namespace AlphaSSA.VIEW
             this.panel1.Controls.Add(this.layoutControl3);
             this.panel1.Location = new System.Drawing.Point(572, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 133);
+            this.panel1.Size = new System.Drawing.Size(307, 132);
             this.panel1.TabIndex = 4;
             // 
             // layoutControl3
@@ -530,7 +566,7 @@ namespace AlphaSSA.VIEW
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.OptionsView.RightToLeftMirroringApplied = true;
             this.layoutControl3.Root = this.layoutControlGroup2;
-            this.layoutControl3.Size = new System.Drawing.Size(307, 133);
+            this.layoutControl3.Size = new System.Drawing.Size(307, 132);
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -609,7 +645,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem4,
             this.layoutControlItem6});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(307, 133);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(307, 132);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem3
@@ -634,7 +670,7 @@ namespace AlphaSSA.VIEW
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 96);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(287, 17);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(287, 16);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
@@ -698,15 +734,15 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem7,
             this.layoutControlItem12});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(891, 518);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(891, 516);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 153);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 152);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(871, 345);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(871, 344);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -714,7 +750,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem2.Control = this.panel1;
             this.layoutControlItem2.Location = new System.Drawing.Point(560, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(311, 153);
+            this.layoutControlItem2.Size = new System.Drawing.Size(311, 152);
             this.layoutControlItem2.Text = "بــيـــانــــات اساسية";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(93, 13);
@@ -724,7 +760,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem7.Control = this.panel2;
             this.layoutControlItem7.Location = new System.Drawing.Point(274, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(286, 153);
+            this.layoutControlItem7.Size = new System.Drawing.Size(286, 152);
             this.layoutControlItem7.Text = "بيــــانــــات البيع";
             this.layoutControlItem7.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(93, 13);
@@ -734,7 +770,7 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem12.Control = this.panel3;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(274, 153);
+            this.layoutControlItem12.Size = new System.Drawing.Size(274, 152);
             this.layoutControlItem12.Text = "بيــانـــات الشراء";
             this.layoutControlItem12.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem12.TextSize = new System.Drawing.Size(93, 13);
@@ -743,7 +779,7 @@ namespace AlphaSSA.VIEW
             // 
             this.tabQty.Controls.Add(this.GridQty);
             this.tabQty.Name = "tabQty";
-            this.tabQty.Size = new System.Drawing.Size(891, 518);
+            this.tabQty.Size = new System.Drawing.Size(891, 516);
             this.tabQty.Text = "كميات المخازن";
             // 
             // GridQty
@@ -752,7 +788,7 @@ namespace AlphaSSA.VIEW
             this.GridQty.Location = new System.Drawing.Point(0, 0);
             this.GridQty.MainView = this.ViewQty;
             this.GridQty.Name = "GridQty";
-            this.GridQty.Size = new System.Drawing.Size(891, 518);
+            this.GridQty.Size = new System.Drawing.Size(891, 516);
             this.GridQty.TabIndex = 0;
             this.GridQty.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewQty});
@@ -767,7 +803,7 @@ namespace AlphaSSA.VIEW
             // 
             this.tabSales.Controls.Add(this.GridSales);
             this.tabSales.Name = "tabSales";
-            this.tabSales.Size = new System.Drawing.Size(891, 518);
+            this.tabSales.Size = new System.Drawing.Size(891, 516);
             this.tabSales.Text = "مبيعات";
             // 
             // GridSales
@@ -777,7 +813,7 @@ namespace AlphaSSA.VIEW
             this.GridSales.Location = new System.Drawing.Point(0, 0);
             this.GridSales.MainView = this.ViewSales;
             this.GridSales.Name = "GridSales";
-            this.GridSales.Size = new System.Drawing.Size(891, 518);
+            this.GridSales.Size = new System.Drawing.Size(891, 516);
             this.GridSales.TabIndex = 0;
             this.GridSales.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewSales});
@@ -812,12 +848,13 @@ namespace AlphaSSA.VIEW
             this.ViewSales.Name = "ViewSales";
             this.ViewSales.OptionsBehavior.Editable = false;
             this.ViewSales.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.ViewSales_RowClick);
+            this.ViewSales.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.ViewSales_CustomColumnDisplayText);
             // 
             // tabBrchases
             // 
             this.tabBrchases.Controls.Add(this.GridBurchase);
             this.tabBrchases.Name = "tabBrchases";
-            this.tabBrchases.Size = new System.Drawing.Size(891, 518);
+            this.tabBrchases.Size = new System.Drawing.Size(891, 516);
             this.tabBrchases.Text = "مشتريات";
             // 
             // GridBurchase
@@ -826,7 +863,7 @@ namespace AlphaSSA.VIEW
             this.GridBurchase.Location = new System.Drawing.Point(0, 0);
             this.GridBurchase.MainView = this.ViewBurchase;
             this.GridBurchase.Name = "GridBurchase";
-            this.GridBurchase.Size = new System.Drawing.Size(891, 518);
+            this.GridBurchase.Size = new System.Drawing.Size(891, 516);
             this.GridBurchase.TabIndex = 0;
             this.GridBurchase.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ViewBurchase});
@@ -836,6 +873,170 @@ namespace AlphaSSA.VIEW
             this.ViewBurchase.GridControl = this.GridBurchase;
             this.ViewBurchase.Name = "ViewBurchase";
             this.ViewBurchase.OptionsBehavior.Editable = false;
+            this.ViewBurchase.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.ViewSales_CustomColumnDisplayText);
+            // 
+            // TabSalesRet
+            // 
+            this.TabSalesRet.Controls.Add(this.GridSalesRet);
+            this.TabSalesRet.Name = "TabSalesRet";
+            this.TabSalesRet.Size = new System.Drawing.Size(891, 516);
+            this.TabSalesRet.Text = "مردودات البيع";
+            // 
+            // GridSalesRet
+            // 
+            this.GridSalesRet.ContextMenuStrip = this.contextMenuStrip1;
+            this.GridSalesRet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridSalesRet.Location = new System.Drawing.Point(0, 0);
+            this.GridSalesRet.MainView = this.ViewSalesRet;
+            this.GridSalesRet.Name = "GridSalesRet";
+            this.GridSalesRet.Size = new System.Drawing.Size(891, 516);
+            this.GridSalesRet.TabIndex = 1;
+            this.GridSalesRet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.ViewSalesRet});
+            // 
+            // ViewSalesRet
+            // 
+            this.ViewSalesRet.GridControl = this.GridSalesRet;
+            this.ViewSalesRet.Name = "ViewSalesRet";
+            this.ViewSalesRet.OptionsBehavior.Editable = false;
+            this.ViewSalesRet.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.ViewSales_CustomColumnDisplayText);
+            // 
+            // tabPurchaseRet
+            // 
+            this.tabPurchaseRet.Controls.Add(this.GridPurchaseRet);
+            this.tabPurchaseRet.Name = "tabPurchaseRet";
+            this.tabPurchaseRet.Size = new System.Drawing.Size(891, 516);
+            this.tabPurchaseRet.Text = "مردودات الشراء";
+            // 
+            // GridPurchaseRet
+            // 
+            this.GridPurchaseRet.ContextMenuStrip = this.contextMenuStrip1;
+            this.GridPurchaseRet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridPurchaseRet.Location = new System.Drawing.Point(0, 0);
+            this.GridPurchaseRet.MainView = this.ViewPurchaseRet;
+            this.GridPurchaseRet.Name = "GridPurchaseRet";
+            this.GridPurchaseRet.Size = new System.Drawing.Size(891, 516);
+            this.GridPurchaseRet.TabIndex = 1;
+            this.GridPurchaseRet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.ViewPurchaseRet});
+            // 
+            // ViewPurchaseRet
+            // 
+            this.ViewPurchaseRet.GridControl = this.GridPurchaseRet;
+            this.ViewPurchaseRet.Name = "ViewPurchaseRet";
+            this.ViewPurchaseRet.OptionsBehavior.Editable = false;
+            this.ViewPurchaseRet.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.ViewSales_CustomColumnDisplayText);
+            // 
+            // tabStoreConv
+            // 
+            this.tabStoreConv.Controls.Add(this.pictureEdit6);
+            this.tabStoreConv.Controls.Add(this.pictureEdit4);
+            this.tabStoreConv.Controls.Add(this.pictureEdit1);
+            this.tabStoreConv.Controls.Add(this.label1);
+            this.tabStoreConv.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("tabStoreConv.ImageOptions.SvgImage")));
+            this.tabStoreConv.ImageOptions.SvgImageSize = new System.Drawing.Size(15, 15);
+            this.tabStoreConv.Name = "tabStoreConv";
+            this.tabStoreConv.Size = new System.Drawing.Size(891, 516);
+            this.tabStoreConv.Text = "تحويلات المخازن";
+            // 
+            // pictureEdit4
+            // 
+            this.pictureEdit4.EditValue = global::AlphaSSA.Properties.Resources.icons8_services_96px;
+            this.pictureEdit4.Location = new System.Drawing.Point(385, 199);
+            this.pictureEdit4.Name = "pictureEdit4";
+            this.pictureEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit4.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit4.Size = new System.Drawing.Size(34, 39);
+            this.pictureEdit4.TabIndex = 4;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = global::AlphaSSA.Properties.Resources.icons8_building_construction_96px;
+            this.pictureEdit1.Location = new System.Drawing.Point(385, 99);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.Appearance.Options.UseBorderColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(141, 139);
+            this.pictureEdit1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(449, 49);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "يجري العمل علي تطويره ......";
+            // 
+            // tabLog
+            // 
+            this.tabLog.Controls.Add(this.pictureEdit5);
+            this.tabLog.Controls.Add(this.pictureEdit3);
+            this.tabLog.Controls.Add(this.pictureEdit2);
+            this.tabLog.Controls.Add(this.label2);
+            this.tabLog.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("tabLog.ImageOptions.SvgImage")));
+            this.tabLog.ImageOptions.SvgImageSize = new System.Drawing.Size(15, 15);
+            this.tabLog.Name = "tabLog";
+            this.tabLog.Size = new System.Drawing.Size(891, 516);
+            this.tabLog.Text = "السجل";
+            // 
+            // pictureEdit5
+            // 
+            this.pictureEdit5.EditValue = global::AlphaSSA.Properties.Resources.icons8_warning_shield_60px;
+            this.pictureEdit5.Location = new System.Drawing.Point(385, 154);
+            this.pictureEdit5.Name = "pictureEdit5";
+            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit5.Size = new System.Drawing.Size(34, 39);
+            this.pictureEdit5.TabIndex = 4;
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = global::AlphaSSA.Properties.Resources.icons8_services_96px;
+            this.pictureEdit3.Location = new System.Drawing.Point(385, 199);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit3.Size = new System.Drawing.Size(34, 39);
+            this.pictureEdit3.TabIndex = 3;
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = global::AlphaSSA.Properties.Resources.icons8_building_construction_96px;
+            this.pictureEdit2.Location = new System.Drawing.Point(385, 99);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Size = new System.Drawing.Size(141, 139);
+            this.pictureEdit2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(203, 255);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(449, 49);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "يجري العمل علي تطويره ......";
             // 
             // Root
             // 
@@ -855,6 +1056,19 @@ namespace AlphaSSA.VIEW
             this.layoutControlItem1.Size = new System.Drawing.Size(897, 547);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = global::AlphaSSA.Properties.Resources.icons8_warning_shield_60px;
+            this.pictureEdit6.Location = new System.Drawing.Point(385, 154);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit6.Size = new System.Drawing.Size(34, 39);
+            this.pictureEdit6.TabIndex = 5;
             // 
             // FrmProductDetails
             // 
@@ -929,8 +1143,25 @@ namespace AlphaSSA.VIEW
             this.tabBrchases.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridBurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBurchase)).EndInit();
+            this.TabSalesRet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridSalesRet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewSalesRet)).EndInit();
+            this.tabPurchaseRet.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridPurchaseRet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewPurchaseRet)).EndInit();
+            this.tabStoreConv.ResumeLayout(false);
+            this.tabStoreConv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            this.tabLog.ResumeLayout(false);
+            this.tabLog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -997,5 +1228,22 @@ namespace AlphaSSA.VIEW
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem طباعةالفاتورةToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةمرتجعToolStripMenuItem;
+        private DevExpress.XtraTab.XtraTabPage TabSalesRet;
+        private DevExpress.XtraGrid.GridControl GridSalesRet;
+        private DevExpress.XtraGrid.Views.Grid.GridView ViewSalesRet;
+        private DevExpress.XtraTab.XtraTabPage tabPurchaseRet;
+        private DevExpress.XtraGrid.GridControl GridPurchaseRet;
+        private DevExpress.XtraGrid.Views.Grid.GridView ViewPurchaseRet;
+        private DevExpress.XtraTab.XtraTabPage tabStoreConv;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraTab.XtraTabPage tabLog;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit4;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit5;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit6;
     }
 }

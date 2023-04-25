@@ -40,22 +40,7 @@ namespace AlphaSSA.Models
             }
             return sellcount;
         }
-        decimal GetSellprice()
-        {
-            if (sellcount == 0)
-            {
-                using (var db = new SSADBDataContext())
-                {
-                    totalPrice = (from pr in db.TblProducts
-                                 join dt in db.TbLInvoiceDetailes on pr.ID equals dt.itemID
-                                 join hr in db.TblInvoiceHeaders on dt.InvoiceID equals hr.ID
-                                 where hr.invoiceType == (int)Internal.Master.InvoiceType.Sales && dt.itemID == ProductID
-                                 select dt).Sum(x => x.TotalPrice) ?? 0;
-
-                }
-            }
-            return totalPrice;
-        }
+   
     }
      
 }

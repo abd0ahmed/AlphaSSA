@@ -36,6 +36,7 @@ namespace AlphaSSA.VIEW
             InitializeComponent();
             this.invoiceID = InvoiceID;
             invType = InvType;
+            lkpInvoiceCode.EditValue = InvoiceID;
             New();
             
         }
@@ -114,11 +115,11 @@ namespace AlphaSSA.VIEW
             InitializeCode();
             Header.invoiceType = GetInvoiceType();
             Header.Date = DateTime.Now;
-            Header.Total = returnProducts.Sum(x => x.totalPrice);
+            Header.Total = returnProducts.Sum(x => x.totalPrice);//proplem 1
             Header.Discount = 0;
-            Header.net = Header.Total;
+            Header.net = Header.Total; //proplem 2
             Header.SourceID = sourceHeader.ID;
-            Header.Time = DateTime.Today.TimeOfDay;
+            Header.Time = DateTime.Today.TimeOfDay; //proplem 3
         }
         string GetNewCode(string codeform)
         {

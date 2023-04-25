@@ -15,20 +15,7 @@ namespace AlphaSSA.Models
         public decimal totalPrice { get; set; }
         public string Code { get; set; }
         public decimal Discount { get; set; }
-        string GetProductName()
-        {
-            using (var db=new SSADBDataContext())
-            {
-                return db.TblProducts.SingleOrDefault(x => x.ID == this.ID).Name;
-            }
-        }
-        string GetProductCode()
-        {
-            using (var db = new SSADBDataContext())
-            {
-                return db.TblProducts.SingleOrDefault(x => x.ID == this.ID).barcode;
-            }
-        }
+  
         public int GetStoreID(int invid)
         {
             int s = 0;

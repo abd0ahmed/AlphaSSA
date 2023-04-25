@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -227,6 +242,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProcessors\FullCategoryProcessor.cs" />
     <Compile Include="DataProcessors\FullProductProcessor.cs" />
     <Compile Include="Internal\Master.cs" />
     <Compile Include="Models\ClsBarCodeModel.cs" />
@@ -237,7 +253,6 @@
     <Compile Include="Models\clsInvoiceInfos.cs" />
     <Compile Include="Models\ClsInvoiceProducts.cs" />
     <Compile Include="Models\ClsInvoiceReturnModel.cs" />
-    <Compile Include="Models\ClsInvReport.cs" />
     <Compile Include="Models\ClsInvReportModel.cs" />
     <Compile Include="Models\clsProductDetails.cs" />
     <Compile Include="Models\CLsProductSalesInvoicesInfo.cs" />
@@ -246,6 +261,7 @@
     <Compile Include="Models\ClsStoreInfo.cs" />
     <Compile Include="Models\ClsStoreProductsModel.cs" />
     <Compile Include="Models\InvoiceReportModel.cs" />
+    <Compile Include="Models\ProductFullIvoiceDataModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SSADB.cs">
@@ -662,6 +678,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alpha-Logo-Black.ico" />
+    <None Include="Resources\icons8_warning_shield_60px.png" />
+    <None Include="Resources\icons8_automatic_gearbox_warning_200px.png" />
+    <None Include="Resources\icons8_services_96px.png" />
+    <None Include="Resources\icons8_building_construction_96px.png" />
+    <None Include="Resources\icons8_building_construction_48px.png" />
     <None Include="Resources\icons8-whatsapp %281%29.svg" />
     <None Include="Resources\icons8-whatsapp.svg" />
     <None Include="Resources\exporttoxls1.svg" />
@@ -815,6 +836,18 @@
     <PackageReference Include="System.Threading.Tasks.Extensions">
       <Version>4.5.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

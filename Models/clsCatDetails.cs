@@ -11,13 +11,13 @@ namespace AlphaSSA.Models
     public class clsCatDetails : TblCategory
     {
         SSADBDataContext db;
-
-
         public List<clsFullProduct> tblProducts;
         [Display(Name = "عدد المنتجات")]
         public int ProductsCount { get { return GetProductsCount(); } }
-        [Display(Name = "القيمة الاجمالية")]
+        [Display(Name = "القيمة الاجمالية(ش)")]
         public string CatVaLue { get { return GetProductsBuyValue() + " جم"; } }
+        [Display(Name = "القيمة الاجمالية(ب)")]
+        public string CatSellVaLue { get { return GetProductsValue() + " جم"; } }
         [Display(Name = "عدد القطع")]
         public int FullCount { get { return GetFullCount(); } }
         public clsCatDetails(TblCategory category)
@@ -88,6 +88,7 @@ namespace AlphaSSA.Models
                 return 0;
             }
         }
+       
 
     }
 }

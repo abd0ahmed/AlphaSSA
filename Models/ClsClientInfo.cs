@@ -57,7 +57,8 @@ namespace AlphaSSA.Models
                 }
             }
                 return invoiceHeaders;
-           
+            
+
         }
         DateTime? GetLAstInv()
         {
